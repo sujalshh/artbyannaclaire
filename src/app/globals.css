@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+:root {
+  --cream: #faf7f4;
+  --pink: #f7c6d4;
+  --pink-soft: #ffe4ef;
+  --blue: #b8d8f0;
+  --blue-soft: #dff0fb;
+  --ink: #4a4458;
+  --ink-light: #7a7289;
+}
+
+@theme inline {
+  --color-cream: var(--cream);
+  --color-pink: var(--pink);
+  --color-pink-soft: var(--pink-soft);
+  --color-baby-blue: var(--blue);
+  --color-blue-soft: var(--blue-soft);
+  --color-ink: var(--ink);
+  --color-ink-light: var(--ink-light);
+  --font-sans: var(--font-nunito);
+  --font-script: var(--font-pacifico);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-nunito), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(247, 198, 212, 0.55);
+}
+
+.font-script {
+  font-family: var(--font-pacifico), cursive;
+}
+
+.scallop-border {
+  border-radius: 28px;
+  box-shadow:
+    0 0 0 2px #fff,
+    0 0 0 4px var(--pink),
+    0 12px 40px rgba(247, 198, 212, 0.35);
+}
+
+.paper-dots {
+  background-image: radial-gradient(rgba(247, 198, 212, 0.35) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+@keyframes bow-sway {
+  0%,
+  100% {
+    transform: rotate(-2.5deg);
+  }
+  50% {
+    transform: rotate(2.5deg);
+  }
+}
+
+.bow-sway-left {
+  transform-origin: top center;
+  animation: bow-sway 4.5s ease-in-out infinite;
+}
+
+.bow-sway-right {
+  transform-origin: top center;
+  animation: bow-sway-mirror 4.5s ease-in-out infinite;
+}
+
+@keyframes bow-sway-mirror {
+  0%,
+  100% {
+    transform: scaleX(-1) rotate(-2.5deg);
+  }
+  50% {
+    transform: scaleX(-1) rotate(2.5deg);
+  }
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .butterfly-field {
+    display: none;
+  }
+}
