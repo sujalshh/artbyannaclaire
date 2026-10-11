@@ -1,7 +1,7 @@
 type Props = {
   side: "left" | "right";
   className?: string;
-  size?: "sm" | "md" | "lg";
+  size?: "xs" | "sm" | "md" | "lg";
   tone?: "pink" | "blue";
   delaySec?: number;
 };
