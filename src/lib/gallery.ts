@@ -38,6 +38,11 @@ export const GALLERY: GalleryItem[] = [
     tag: "banner",
   },
   {
+    src: "/gallery/IMG_5900-5c057304-c9fb-4718-85df-a144952df1b5.png",
+    alt: "Margs & Matrimony bachelorette banner — Madeline, Fort Walton Beach",
+    tag: "banner",
+  },
+  {
     src: "/gallery/IMG_5652-7357e7f8-ff4e-4e35-a05d-5cca9819b088.png",
     alt: "Pearl beaded letter S in pastel gems",
     tag: "letter",
