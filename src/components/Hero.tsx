@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { BRAND } from "@/lib/brand";
-import { BowColumn } from "@/components/HangingBow";
+import { BowColumn, HeroBowGutter } from "@/components/HangingBow";
 import { CherryAccent } from "@/components/CherryAccent";
 import { Sparkles } from "lucide-react";
 
@@ -9,12 +9,14 @@ export function Hero() {
     <section className="paper-dots relative overflow-x-hidden px-5 pb-16 pt-12 md:px-8 md:pt-16">
       <div className="pointer-events-none absolute -right-20 top-10 h-64 w-64 rounded-full bg-pink-soft/80 blur-3xl" />
       <div className="pointer-events-none absolute -left-16 bottom-0 h-56 w-56 rounded-full bg-blue-soft/90 blur-3xl" />
+      <HeroBowGutter side="left" />
+      <HeroBowGutter side="right" />
       <div className="relative mx-auto max-w-3xl text-center">
         <p className="inline-flex items-center gap-2 rounded-full bg-white/80 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-ink-light">
           <Sparkles className="h-3.5 w-3.5 text-pink" />
           Handmade · Painted · Personal
         </p>
-        <div className="mx-auto mt-6 flex max-w-4xl items-start justify-center gap-1 sm:gap-3 md:gap-5">
+        <div className="mx-auto mt-6 flex max-w-5xl items-start justify-center gap-2 sm:gap-4 md:gap-8 lg:gap-10">
           <BowColumn side="left" />
           <h1 className="font-script min-w-0 flex-1 py-1 text-center text-5xl leading-tight text-ink sm:flex-none md:text-6xl lg:text-7xl">
             <span className="relative inline-block">

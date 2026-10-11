@@ -19,8 +19,11 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-pink/30 bg-cream/90 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 md:px-8">
-        <Link href="/" className="font-script text-2xl text-ink md:text-3xl">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 py-3 pl-2 pr-5 md:pl-3 md:pr-8">
+        <Link
+          href="/"
+          className="font-script -ml-0.5 text-2xl text-ink md:-ml-1.5 md:text-3xl"
+        >
           {BRAND.name}
         </Link>
         <nav className="hidden items-center gap-1 md:flex">
